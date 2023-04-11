@@ -1,1 +1,1 @@
-var news = [{"content":"Test number 1. Qwerty"},{"content":"Test number 2. Uiopas"},{"content":"Test number 3. Dfghjk"}];
+var news = [{"content":"Test number 1. Qwerty"},{"content":"Test number 2. Uiopas"},{"content":"Test number 3. Dfghjk"},{"content":"This server uses items V2, which is only available with slash commands.\nTry using"}];
