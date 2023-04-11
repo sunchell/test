@@ -23,7 +23,8 @@
 		<ul id="news"></ul>
 		
 		<script>
-			window.location.href = window.location.href + '?q=' + Math.random();
+			var url = window.location.href + '?q=' + Math.random();
+			window.location.href = url;
 			
 			var newsList = document.getElementById("news");
 			
