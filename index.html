@@ -23,8 +23,12 @@
 		<ul id="news"></ul>
 		
 		<script>
-			var url = window.location.href + '?q=' + Math.random();
-			window.location.href = url;
+			var xhr = new XMLHttpRequest();
+			xhr.open('HEAD', 'index.html', false);
+			xhr.send();
+			var lastModified = new Date(xhr.getResponseHeader('Last-Modified')).getTime();
+			var url = window.location.href.split('?')[0] + '?v=' + lastModified;
+			window.history.replaceState(null, null, url);
 			
 			var newsList = document.getElementById("news");
 			
