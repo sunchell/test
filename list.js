@@ -1,1 +1,1 @@
-var news = [];
+var news = [{"content":"Test number 1. Qwerty"}];
