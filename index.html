@@ -1,1 +1,39 @@
-Test 123
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>Test list</title>
+		<script type="text/javascript" src="list.js"></script>
+		<style>
+			html, body, #news {
+				padding: 0;
+				margin: 0;
+			}
+			#news li {
+				background: #fff;
+				border: 4px solid black;
+				box-shadow: 4px 4px 0 rgb(0 0 0/.3);
+				padding: 10px;
+				margin: 10px;
+				list-style-type: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="news"></ul>
+		
+		<script>
+			var newsList = document.getElementById("news");
+			
+			for(var i = news.length-1;i>=0;i--){
+				var listItem = document.createElement("li");
+				
+				var content = document.createElement("p");
+				content.innerHTML = news[i].content;
+				listItem.appendChild(content);
+				
+				newsList.appendChild(listItem);
+			}
+		</script>
+	</body>
+</html>
