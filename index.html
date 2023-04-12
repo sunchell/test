@@ -23,7 +23,7 @@
 		<ul id="news"></ul>
 		
 		<script>
-			$.get('list.json', function(data){
+			$.get('list.json?q=' + Math.random(), function(data){
 				var newsList = document.getElementById("news");
 				for(var i = data.length-1;i>=0;i--){
 					var listItem = document.createElement("li");
