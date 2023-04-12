@@ -3,7 +3,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<title>Test list</title>
-		<script type="text/javascript" src="list.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
 		<style>
 			html, body, #news {
 				padding: 0;
@@ -23,17 +23,16 @@
 		<ul id="news"></ul>
 		
 		<script>
-			var newsList = document.getElementById("news");
-			
-			for(var i = news.length-1;i>=0;i--){
-				var listItem = document.createElement("li");
-				
-				var content = document.createElement("p");
-				content.innerHTML = news[i].content;
-				listItem.appendChild(content);
-				
-				newsList.appendChild(listItem);
-			}
+			$.get('list.json', function(data){
+				var newsList = document.getElementById("news");
+				for(var i = data.length-1;i>=0;i--){
+					var listItem = document.createElement("li");
+					var content = document.createElement("p");
+					content.innerHTML = data[i].content;
+					listItem.appendChild(content);
+					newsList.appendChild(listItem);
+				}
+			});
 		</script>
 	</body>
 </html>
